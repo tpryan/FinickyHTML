@@ -50,7 +50,7 @@
 
 
 body{
-	font-family: "Lions Den";
+	
 	padding: 0;
 	margin: 0;
 	background-image: url('bg_detail.jpg');
@@ -124,6 +124,7 @@ body{
 }
 
 #itemAndPlaceList .item{
+	font-family: "LionsDenRegular";
 	font-size: 24px;
 }
 
