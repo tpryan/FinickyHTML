@@ -24,13 +24,13 @@
 	
 	<gap:splash src="assets/splash.jpg" width="640" height="960" />
 
-	<icon src="assets/img/icon.png" gap:role="default" />
-	<icon src="assets/img/icon512.png" gap:role="default" width="512" height="512" />
-	<icon src="assets/img/icon72.png" gap:role="default" width="72" height="72" />
-	<icon src="assets/img/icon57.png" gap:role="default" width="57" height="57" />
-	<icon src="assets/img/icon48.png" gap:role="default" width="48" height="48" />
-	<icon src="assets/img/icon36.png" gap:role="default" width="36" height="36" />
-	<icon src="assets/img/icon29.png" gap:role="default" width="29" height="29" />
+	<icon src="assets/icons/icon.png" gap:role="default" />
+	<icon src="assets/icons/icon512.png" gap:role="default" width="512" height="512" />
+	<icon src="assets/icons/icon72.png" gap:role="default" width="72" height="72" />
+	<icon src="assets/icons/icon57.png" gap:role="default" width="57" height="57" />
+	<icon src="assets/icons/icon48.png" gap:role="default" width="48" height="48" />
+	<icon src="assets/icons/icon36.png" gap:role="default" width="36" height="36" />
+	<icon src="assets/icons/icon29.png" gap:role="default" width="29" height="29" />
 	
 	<feature name="http://api.phonegap.com/1.0/network"/>
 
