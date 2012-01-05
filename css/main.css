@@ -1,0 +1,158 @@
+body{
+	font-family: "Lions Den";
+	padding: 0;
+	margin: 0;
+	background-image: url('bg_detail.jpg');
+	background-repeat: no-repeat;
+	background-size: 480px auto;
+	background-position-x: center;
+}
+
+#landing header{
+	background-image: url('bg_location.png');
+	background-size: 480px 222px;
+	background-repeat: no-repeat;
+	min-height: 222px;
+	z-index: 10;
+}
+
+#landing header h1{
+	position: absolute;
+	font-family: "Spoleto";
+	color: #FFFFFF;
+	margin-top: 0;
+	
+	left: 5px;
+	top: 50px;
+	font-size: 40px;
+	text-shadow: #444444 2px 2px 3px;
+	-webkit-transform:rotate(-11.5deg);
+	font-weight: normal;
+	
+}
+
+#itemAndPlaceList{
+	list-style: none;
+	background-image: url('rule3.png');
+	background-repeat: no-repeat;
+	background-position: top;
+	padding: 0;
+	z-index: 0;
+}
+
+#itemAndPlaceList li{
+	background-image: url('rule.png');
+	background-repeat: no-repeat;
+	background-position: bottom;
+	
+}
+
+#itemAndPlaceList li:nth-child(2n+2){
+	background-image: url('rule2.png');
+}
+
+#itemAndPlaceList li:nth-child(3n+3){
+	background-image: url('rule3.png');
+}
+
+
+#itemAndPlaceList li a{
+	text-decoration: none;
+	color: #21211F;
+	display: block;
+	padding: 20px 0 20px 40px;
+	background-image: url('itemListButtonUp.png');
+	background-repeat: no-repeat;
+	background-position: right;
+	
+	background-size: 95px 94px;
+}
+
+#itemAndPlaceList li a:hover, #itemAndPlaceList li a:active  {
+	background-image: url('itemListButtonDown.png');
+}
+
+#itemAndPlaceList .item{
+	font-size: 24px;
+}
+
+#itemAndPlaceList .location{
+	font-family: "Trade Gothic LT Std";
+	font-size: 14px;
+	text-transform: uppercase;
+}
+
+#itemAndPlaceList .distance{
+	font-family: "Trade Gothic LT Std";
+	font-size: 12px;
+}
+
+
+
+#wrapper {
+	position:absolute; z-index:1;
+	top:205px; bottom:0px; left:0;
+	width:100%;
+	overflow:auto;
+	z-index: 0;
+}
+
+			
+			
+			
+			
+			
+
+
+
+
+
+
+@media (min-width:480px) {
+	
+	body{
+		background-size: 640px auto;
+	}
+
+
+	
+	
+	#landing header{
+		background-size: 640px 333px;
+		min-height: 333px;
+	}
+	
+	#landing header h1{
+		left: 10px;
+		top: 70px;
+		font-size: 60px;
+		text-shadow: #444444 2px 2px 3px;
+		-webkit-transform:rotate(-12deg);
+		
+	}
+	
+	#itemAndPlaceList .item{
+		font-size: 30px;
+	}
+	
+	#itemAndPlaceList .location{
+		font-size: 18px;
+	}
+	
+	#itemAndPlaceList .distance{
+		font-size: 16px;
+	}
+	
+	
+	#wrapper {
+		top:320px; bottom:0px; left:0;
+	}
+				
+}
+
+@media (min-width:640px) {
+	* {
+		display: none;
+	}
+
+}

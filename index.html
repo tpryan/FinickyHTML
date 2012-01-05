@@ -1,13 +1,121 @@
 <!DOCTYPE html> 
 <html> 
 	<head> 
-	<title>Page Title</title> 
+	<title>Landing - Finicky</title> 
+	<link rel="stylesheet" href="css/main.css" type="text/css" media="screen" />
+	<script type="text/javascript" src="js/iscroll.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
-	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	
+	<script type="text/javascript">
+
+		var myScroll;
+		function loaded() {
+			myScroll = new iScroll('wrapper');
+		}
+		
+		document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+		
+		/* * * * * * * *
+		 *
+		 * Use this for high compatibility (iDevice + Android)
+		 *
+		 */
+		document.addEventListener('DOMContentLoaded', setTimeout(function () { loaded(); }, 200), false);
+		/*
+		 * * * * * * * */
+		
+		
+		/* * * * * * * *
+		 *
+		 * Use this for iDevice only
+		 *
+		 */
+		//document.addEventListener('DOMContentLoaded', loaded, false);
+		/*
+		 * * * * * * * */
+		
+		
+		/* * * * * * * *
+		 *
+		 * Use this if nothing else works
+		 *
+		 */
+		//window.addEventListener('load', setTimeout(function () { loaded(); }, 200), false);
+		/*
+		 * * * * * * * */
+		
+		</script>
+		
+		
+	 
     
 </head> 
-<body> 
-
+<body id="landing"> 
+	<header>
+		<h1>Philadelphia, PA</h1>
+	</header>
+	<div id="wrapper">
+		<ul id="itemAndPlaceList">
+			<li>
+				<a href="">
+					<div class="item">Coffee</div>
+					<div class="location">McCrossen's Tavern</div>
+					<div class="distance">(332 ft)</div>
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<div class="item">Stoudt's Double Bock</div>
+					<div class="location">McCrossen's Tavern</div>
+					<div class="distance">(332 ft)</div>
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<div class="item">Yuengling Lager</div>
+					<div class="location">Philly Pub and Grub</div>
+					<div class="distance">(433 ft)</div>
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<div class="item">Coke Zero</div>
+					<div class="location">Wawa</div>
+					<div class="distance">(633 ft)</div>
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<div class="item">Coffee</div>
+					<div class="location">McCrossen's Tavern</div>
+					<div class="distance">(332 ft)</div>
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<div class="item">Stoudt's Double Bock</div>
+					<div class="location">McCrossen's Tavern</div>
+					<div class="distance">(332 ft)</div>
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<div class="item">Yuengling Lager</div>
+					<div class="location">Philly Pub and Grub</div>
+					<div class="distance">(433 ft)</div>
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<div class="item">Coke Zero</div>
+					<div class="location">Wawa</div>
+					<div class="distance">(633 ft)</div>
+				</a>
+			</li>
+		</ul>
+		
+	</div>
 
 </body>
 </html>
