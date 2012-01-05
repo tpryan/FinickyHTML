@@ -115,7 +115,7 @@ body{
 	background-image: url('itemListButtonUp.png');
 	background-repeat: no-repeat;
 	background-position: right;
-	
+	margin-right: 10px;
 	background-size: 95px 94px;
 }
 
@@ -126,6 +126,7 @@ body{
 #itemAndPlaceList .item{
 	font-family: "LionsDenRegular";
 	font-size: 24px;
+	margin-right: 95px;
 }
 
 #itemAndPlaceList .location{
@@ -185,6 +186,7 @@ body{
 	
 	#itemAndPlaceList .item{
 		font-size: 30px;
+		margin-right: 127px;
 	}
 	
 	#itemAndPlaceList .location{
