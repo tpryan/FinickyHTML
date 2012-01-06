@@ -1,10 +1,10 @@
 @font-face {
     font-family: 'SpoletoRegular';
-    src: url('spoleto-webfont.eot');
-    src: url('spoleto-webfont.eot?#iefix') format('embedded-opentype'),
-         url('spoleto-webfont.woff') format('woff'),
-         url('spoleto-webfont.ttf') format('truetype'),
-         url('spoleto-webfont.svg#SpoletoRegular') format('svg');
+    src: url('fonts/spoleto-webfont.eot');
+    src: url('fonts/spoleto-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/spoleto-webfont.woff') format('woff'),
+         url('fonts/spoleto-webfont.ttf') format('truetype'),
+         url('fonts/spoleto-webfont.svg#SpoletoRegular') format('svg');
     font-weight: normal;
     font-style: normal;
 
@@ -12,11 +12,11 @@
 
 @font-face {
     font-family: 'LionsDenRegular';
-    src: url('lions_den-webfont.eot');
-    src: url('lions_den-webfont.eot?#iefix') format('embedded-opentype'),
-         url('lions_den-webfont.woff') format('woff'),
-         url('lions_den-webfont.ttf') format('truetype'),
-         url('lions_den-webfont.svg#LionsDenRegular') format('svg');
+    src: url('fonts/lions_den-webfont.eot');
+    src: url('fonts/lions_den-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/lions_den-webfont.woff') format('woff'),
+         url('fonts/lions_den-webfont.ttf') format('truetype'),
+         url('fonts/lions_den-webfont.svg#LionsDenRegular') format('svg');
     font-weight: normal;
     font-style: normal;
 
@@ -24,11 +24,11 @@
 
 @font-face {
     font-family: 'TradeGothicLTStdRegular';
-    src: url('tradegothicltstd-webfont.eot');
-    src: url('tradegothicltstd-webfont.eot?#iefix') format('embedded-opentype'),
-         url('tradegothicltstd-webfont.woff') format('woff'),
-         url('tradegothicltstd-webfont.ttf') format('truetype'),
-         url('tradegothicltstd-webfont.svg#TradeGothicLTStdRegular') format('svg');
+    src: url('fonts/tradegothicltstd-webfont.eot');
+    src: url('fonts/tradegothicltstd-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/tradegothicltstd-webfont.woff') format('woff'),
+         url('fonts/tradegothicltstd-webfont.ttf') format('truetype'),
+         url('fonts/tradegothicltstd-webfont.svg#TradeGothicLTStdRegular') format('svg');
     font-weight: normal;
     font-style: normal;
 
@@ -36,31 +36,41 @@
 
 @font-face {
     font-family: 'TradeGothicLTStdBoldNo.2';
-    src: url('tradegothicltstd-bd2-webfont.eot');
-    src: url('tradegothicltstd-bd2-webfont.eot?#iefix') format('embedded-opentype'),
-         url('tradegothicltstd-bd2-webfont.woff') format('woff'),
-         url('tradegothicltstd-bd2-webfont.ttf') format('truetype'),
-         url('tradegothicltstd-bd2-webfont.svg#TradeGothicLTStdBoldNo.2') format('svg');
+    src: url('fonts/tradegothicltstd-bd2-webfont.eot');
+    src: url('fonts/tradegothicltstd-bd2-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/tradegothicltstd-bd2-webfont.woff') format('woff'),
+         url('fonts/tradegothicltstd-bd2-webfont.ttf') format('truetype'),
+         url('fonts/tradegothicltstd-bd2-webfont.svg#TradeGothicLTStdBoldNo.2') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'TradeGothicLTStdBdCnNo.20';
+    src: url('fonts/tradegothicltstd-bdcn20-webfont.eot');
+    src: url('fonts/tradegothicltstd-bdcn20-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/tradegothicltstd-bdcn20-webfont.woff') format('woff'),
+         url('fonts/tradegothicltstd-bdcn20-webfont.ttf') format('truetype'),
+         url('fonts/tradegothicltstd-bdcn20-webfont.svg#TradeGothicLTStdBdCnNo.20') format('svg');
     font-weight: normal;
     font-style: normal;
 
 }
 
 
-
-
 body{
 	
 	padding: 0;
 	margin: 0;
-	background-image: url('bg_detail.jpg');
+	background-image: url('skimages/bg_detail.jpg');
 	background-repeat: no-repeat;
 	background-size: 480px auto;
 	background-position-x: center;
 }
 
 #landing header{
-	background-image: url('bg_location.png');
+	background-image: url('skimages/bg_location.png');
 	background-size: 480px 222px;
 	background-repeat: no-repeat;
 	min-height: 222px;
@@ -84,7 +94,7 @@ body{
 
 #itemAndPlaceList{
 	list-style: none;
-	background-image: url('rule3.png');
+	background-image: url('skimages/rule3.png');
 	background-repeat: no-repeat;
 	background-position: top;
 	padding: 0;
@@ -92,18 +102,18 @@ body{
 }
 
 #itemAndPlaceList li{
-	background-image: url('rule.png');
+	background-image: url('skimages/rule.png');
 	background-repeat: no-repeat;
 	background-position: bottom;
 	
 }
 
 #itemAndPlaceList li:nth-child(2n+2){
-	background-image: url('rule2.png');
+	background-image: url('skimages/rule2.png');
 }
 
 #itemAndPlaceList li:nth-child(3n+3){
-	background-image: url('rule3.png');
+	background-image: url('skimages/rule3.png');
 }
 
 
@@ -112,7 +122,7 @@ body{
 	color: #21211F;
 	display: block;
 	padding: 20px 0 20px 40px;
-	background-image: url('itemListButtonUp.png');
+	background-image: url('skimages/itemListButtonUp.png');
 	background-repeat: no-repeat;
 	background-position: right;
 	margin-right: 10px;
@@ -120,7 +130,7 @@ body{
 }
 
 #itemAndPlaceList li a:hover, #itemAndPlaceList li a:active  {
-	background-image: url('itemListButtonDown.png');
+	background-image: url('skimages/itemListButtonDown.png');
 }
 
 #itemAndPlaceList .item{
@@ -150,15 +160,83 @@ body{
 	z-index: 0;
 }
 
-			
-			
-			
-			
-			
+#details header{
+	background-image: url('skimages/detailBanner.png');
+	background-repeat: no-repeat;
+	background-size: 350px auto;
+	background-position-x: center;
+	min-height: 158px;
+}
 
+#details header h1{
+	font-family: "LionsDenRegular";
+	margin: 0;
+	text-align: center;
+	font-weight: normal;
+	padding-top: 70px;
+	font-size: 30px;
+}			
+		
+#details #place{
+	width: 350px;
+	padding-left: 20px;
+	margin: 0 auto; 
+}	
+			
+#details #location{
+	font-family: "TradeGothicLTStdBdCnNo.20";
+}			
+			
+#details address{
+	font-family: "TradeGothicLTStdRegular";
+	font-style: normal;
+	display: table-cell;
+	vertical-align: top;
+}				
+			
+#details img{
+	display: block;
+	border: 10px solid #FFFFFF;
+	margin: 0px auto 60px auto;
+	-webkit-box-shadow: 2px 2px 5px 2px #222;
+ 	box-shadow:         2px 2px 5px 2px #222;
+ 	-webkit-transform:rotate(-8deg);
+ 	width: 324px; 
+ 	height: 182px;
+ 	 
+}		
 
+#details #notes{
+	font-family: "LionsDenRegular";
+	width: 350px;
+	padding-left: 20px;
+	margin: 0 auto; 
 
+}
 
+#details #directions{
+	display: block;
+	width: 150px;
+	height: 110px;
+	background-image: url('skimages/directionsUp.png');
+	background-repeat: no-repeat;
+	background-size: 150px 110px;
+	text-decoration: none;
+	color: #21211F;
+	display: table-cell;
+	font-family: "LionsDenRegular";
+	text-align: center;
+}
+
+#details #directions span{
+	display: block;
+	padding-top: 40px;
+}
+
+#details #directions:hover{
+	color: #FFFFFF;
+	background-image: url('skimages/directionsDown.png');
+}
 
 
 @media (min-width:480px) {
@@ -201,6 +279,32 @@ body{
 	#wrapper {
 		top:320px; bottom:0px; left:0;
 	}
+	
+	#details header{
+		background-size: 467px auto;
+		min-height: 211px;
+	}
+	
+	#details header h1{
+		padding-top: 93px;
+		font-size: 40px;
+	}
+	
+	#details #place{
+		width: 467px;
+	}
+	
+	#details #notes{
+		width: 467px;
+	}
+	
+	#details img{
+		border: 16px solid #FFFFFF;
+		margin: 40px auto 90px auto;
+	 	width: 432px; 
+	 	height: 243px;
+	 	 
+	}	
 				
 }
 
