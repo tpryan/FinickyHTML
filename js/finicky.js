@@ -4,16 +4,27 @@
 
 $(document).ready(function () {
 	$(document).keypress(menuClick);
+	document.addEventListener("menubutton", menuClick, false);
 });
 
 function menuClick(e){
 	var ev = e || event;
-      	if (ev.keyCode == 77 || ev.keyCode == 109){
-			alert("Show Menu");
-      	}
+  
+  	if (ev.keyCode == 77 || ev.keyCode == 109){
+		
+		toggleMenu()
+  	}
 }
 
-
+function toggleMenu(){
+	if ($("#androidmenu").css('bottom') != "0px"){ 
+		$("#androidmenu").css('bottom', 0);
+	}
+	else{
+		$("#androidmenu").css('bottom', -$("#androidmenu").height());
+	}
+	
+}
 
 
 

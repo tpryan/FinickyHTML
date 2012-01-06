@@ -58,6 +58,19 @@
 
 }
 
+@font-face {
+    font-family: 'LiberatorRegular';
+    src: url('fonts/liberator-webfont.eot');
+    src: url('fonts/liberator-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/liberator-webfont.woff') format('woff'),
+         url('fonts/liberator-webfont.ttf') format('truetype'),
+         url('fonts/liberator-webfont.svg#LiberatorRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
 
 body{
 	
@@ -239,6 +252,43 @@ body{
 }
 
 
+#androidmenu{
+	font-family: "LiberatorRegular";
+	background-image: url('skimages/bg_menu.png');
+	background-repeat: no-repeat;
+	background-size: 480px auto;
+	background-position-x: center;
+	min-height: 119px;
+	position:fixed;
+	width: 100%;
+	bottom: -200px;
+	
+	
+	-webkit-transition: bottom 0.5s ease-out;  /* Saf3.2+, Chrome */
+	-moz-transition: bottom 0.5s ease-out;  /* FF4+ */
+	-ms-transition: bottom 0.5s ease-out;  /* IE10? */
+	-o-transition: bottom 0.5s ease-out;  /* Opera 10.5+ */
+	transition: bottom 0.5s ease-out;	
+	
+	
+}
+
+#androidmenu menu{
+	display: table;
+	width: 100%;
+	padding: 0;
+	margin: 0;		
+}
+#androidmenu a{
+	display: table-cell;
+	width: 50%;
+	text-align: center;
+	text-decoration: none;
+	color: #8A5C30;
+	font-size: 35px;
+	padding: 20px 0;
+}
+
 @media (min-width:480px) {
 	
 	body{
@@ -304,7 +354,11 @@ body{
 	 	width: 432px; 
 	 	height: 243px;
 	 	 
-	}	
+	}
+	
+	#androidmenu{
+		background-size: 640px auto;
+		min-height: 159px;
 				
 }
 
