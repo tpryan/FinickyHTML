@@ -261,7 +261,7 @@ body{
 	min-height: 119px;
 	position:fixed;
 	width: 100%;
-	bottom: -200px;
+	/*bottom: -200px;*/
 	
 	
 	-webkit-transition: bottom 0.5s ease-out;  /* Saf3.2+, Chrome */
