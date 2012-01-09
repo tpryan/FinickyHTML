@@ -366,9 +366,9 @@ body{
 
 #edit #notes_content{
 	display: block;
-	width: 440px;
+	width: 240px;
 	margin: 20px auto;
-	min-height: 300px;
+	min-height: 100px;
 	background: none;
 	border:none;
 	background-image: url('skimages/noteBottom.png');
@@ -386,9 +386,9 @@ body{
 
 #edit #notes {
 	
-	width: 500px;
+	width: 300px;
 	margin: 20px auto;
-	min-height: 300px;
+	min-height: 100px;
 	background-image: url('skimages/noteTop.png');
 	background-repeat: no-repeat;
 	background-size: 100% auto;
@@ -398,9 +398,9 @@ body{
 
 #edit #notes_content_hidden{
 	display: block;
-	width: 440px;
+	width: 240px;
 	margin: 20px auto;
-	min-height: 300px;
+	min-height: 100px;
 	background: none;
 	padding: 30px;
 	outline: 0;
