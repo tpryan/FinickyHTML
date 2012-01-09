@@ -6,11 +6,29 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
 	
+	<script>
 		
+		function createAutoResizingTextArea(textAreaID){
+			var textArea = document.querySelector("#" + textAreaID);
+			var textAreaMirror = document.createElement("p");
+			textAreaMirror.setAttribute("id", "notes_content_hidden");
+			document.querySelector("body").appendChild(textAreaMirror);
+			
+		}	
+	
+		function resizeTextArea(){
+			var content = document.querySelector("#notes_content");
+			var container = document.querySelector("#notes_content_hidden");
+			
+			container.innerText = content.value;
+			content.style.height = container.offsetHeight + "px";
+			
+		}
+	</script>	
 	 
     
 </head> 
-<body id="edit"> 
+<body id="edit" onload="createAutoResizingTextArea('notes_content')"> 
 	
 	<form id="editForm" action="" method="get">
 		<label>What did you find?</label><br />
@@ -27,9 +45,9 @@
 		
 		<br />
 		<div id="notes">
-			<div id="notes_content" contenteditable="true">
+			<textarea id="notes_content" onkeyup="resizeTextArea()">
 				
-			</div>
+			</textarea>
 		</div>
 		
 	</form>
