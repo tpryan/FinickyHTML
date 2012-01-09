@@ -259,7 +259,7 @@ body{
 	background-size: 480px auto;
 	background-position-x: center;
 	min-height: 119px;
-	position:fixed;
+	/*position:fixed;*/
 	width: 100%;
 	/*bottom: -200px;*/
 	
