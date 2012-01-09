@@ -289,6 +289,113 @@ body{
 	padding: 20px 0;
 }
 
+#androidmenu a:hover, #androidmenu a:active{
+	color: #0A2527;
+	background-image: url('skimages/androidmenuhighlight.png');
+}
+
+
+
+#edit form > *{
+	width: 300px;
+	margin: 0 auto;
+}	
+
+#edit label{
+	display: block;
+	font-family: "LiberatorRegular";
+	font-size: 25px;
+}
+
+#edit input, #edit textarea{
+	display: block;
+	font-family: "LionsDenRegular";
+	font-size: 20px;
+	
+}
+
+#edit form > a{
+	display: block;
+}	
+
+
+
+#androidStaticMenu{
+	font-family: "LiberatorRegular";
+	background-image: url('skimages/bg_tabmenu.png');
+	background-repeat: no-repeat;
+	background-size: auto auto;
+	background-position-x: center;
+	min-height: 65px;
+	position:fixed;
+	width: 80%;
+	left: 10%;
+	bottom: 0;
+	margin: 0 auto;
+	
+	
+}
+
+
+#androidStaticMenu menu{
+	display: table;
+	width: 100%;
+	padding: 0;
+	margin: 0;		
+}
+
+#androidStaticMenu a{
+	display: table-cell;
+	width: 50%;
+	text-align: center;
+	text-decoration: none;
+	color: #8A5C30;
+	font-size: 35px;
+	padding: 20px 0;
+	
+	
+}
+
+#androidStaticMenu a:hover, #androidStaticMenu a:active{
+	color: #0A2527;
+	background-image: url('skimages/androidmenuhighlight.png');
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+
+#edit #notes_content{
+	display: block;
+	width: 320px;
+	margin: 20px auto;
+	min-height: 100px;
+	background: none;
+	border:none;
+	background-image: url('skimages/noteBottom.png');
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	background-position-x: center;
+	background-position-y: 100%;
+	padding: 30px;
+	outline: 0;
+}
+
+#edit #notes {
+	font-family: "LionsDenRegular";
+	font-size: 25px;
+	width: 380px;
+	margin: 20px auto;
+	min-height: 300px;
+	background-image: url('skimages/noteTop.png');
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	background-position-x: center;
+	background-position-y: 0;
+}	
+
+
+
+
 @media (min-width:480px) {
 	
 	body{
