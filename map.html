@@ -8,6 +8,7 @@
       #map_canvas { height: 100% }
     </style>
     
+    <link rel="stylesheet" href="css/main.css" type="text/css" media="screen" />
     <script type="text/javascript"
       src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBbrN3b2Ff_zTemKA4quBv8oAAdfQhISyY&sensor=true">
     </script>
@@ -15,33 +16,52 @@
     <script type="text/javascript"src="/js/label.js"></script>
     <script type="text/javascript">
       function initialize() {
+      	
+      	
+      	var locations = [];
+      	locations[0] = {lat:39.9496402, lon:-75.1670608,  title:'Holts Cigar Company', id:1}
+      	locations[1] = {lat:39.953457, lon:-75.1925459,  title:'Avril 50', id:2}
+      	locations[2] = {lat:39.967541, lon:-75.175991,  title:'RyBread', id:3}
+      	
+      	
+      	
         var myOptions = {
-          center: new google.maps.LatLng(39.9707361, -75.1778239),
-          zoom: 14,
-          mapTypeId: google.maps.MapTypeId.ROADMAP
+          		center: new google.maps.LatLng(39.9707361, -75.1778239),
+          		zoom: 14,
+          		mapTypeId: google.maps.MapTypeId.ROADMAP
         };
-        var map = new google.maps.Map(document.getElementById("map_canvas"),
-            myOptions);
+        var map = new google.maps.Map(document.getElementById("map_canvas"),myOptions);
             
+        
+        for (i=0;i<locations.length; i++){
+        	var loc = locations[i];
+        	
+        	  // Creating a marker and positioning it on the map
+			var marker = new google.maps.Marker({
+		 		position: new google.maps.LatLng(loc.lat, loc.lon),
+		  		map: map,
+		  		title: loc.title,
+				clickable: true,
+				icon: '/css/skimages/mapMarker.png'
+				
+			});
+			
+			var label = new Label({
+	          map: map
+	        });
+	        label.bindTo('position', marker);
+	        label.bindTo('text', marker, 'title');
+	        label.bindTo('visible', marker);
+	        label.bindTo('clickable', marker);
+	        label.bindTo('zIndex', marker);
+        	
+        	
+        }
             
-         // Creating a marker and positioning it on the map
-		var marker = new google.maps.Marker({
-	 		position: new google.maps.LatLng(39.9496402, -75.1670608),
-	  		map: map,
-	  		title: 'Holts Cigar Co',
-			clickable: false,
-			icon: '/css/skimages/mapMarker.png'
-		});
-		
-		var label = new Label({map: map});
-		label.bindTo('position', marker, 'position');
-		label.bindTo('text', marker, 'title');
-
-		
+       
 		    
       }
       
-     
       
       
     </script>
