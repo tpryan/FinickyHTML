@@ -69,13 +69,16 @@
     font-style: normal;
 
 }
-
+html {
+	overflow-y: visible;
+		
+}	
 
 
 body{
-	
+	max-width: 640px;
 	padding: 0;
-	margin: 0;
+	margin: 0 auto;
 	background-image: url('skimages/bg_detail.jpg');
 	background-repeat: no-repeat;
 	background-size: 480px auto;
@@ -259,9 +262,9 @@ body{
 	background-size: 480px auto;
 	background-position-x: center;
 	min-height: 119px;
-	/*position:fixed;*/
+	position:fixed;
 	width: 100%;
-	/*bottom: -200px;*/
+	bottom: -200px;
 	
 	
 	-webkit-transition: bottom 0.5s ease-out;  /* Saf3.2+, Chrome */
@@ -385,7 +388,7 @@ body{
 }
 
 #edit #notes {
-	
+	clear: both;
 	width: 300px;
 	margin: 20px auto;
 	min-height: 100px;
@@ -408,6 +411,86 @@ body{
 	font-size: 30px;
 	visibility: hidden;
 	position: fixed;
+}
+
+#edit input {
+	border:none;
+	background: none;
+	outline: 0;
+	background-image: url('skimages/bg_editfield.png');
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	background-position-x: center;
+	background-position-y: 0;
+	min-height: 50px;
+	text-align: center;
+}
+
+#edit #locationSelector{
+	display: block;
+	font-family: "LionsDenRegular";
+	color: 	#582D07;
+	text-decoration: none;
+	background-image: url('skimages/editLocationUp.png');
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	background-position-x: center;
+	background-position-y: 0;
+	height: 90px;
+	text-align: center;
+	line-height: 4;
+	font-size: 20px;
+	margin-top: 0;
+	
+}
+
+#edit #locationSelector:hover,#edit #locationSelector:active{
+	color: #ffffff;
+	background-image: url('skimages/editLocationDown.png');
+}
+
+#edit #selectors{
+	display: table;
+	width: 300px;
+	margin: 0 auto;
+}
+
+#edit #selectors div{
+	display: table-cell;
+}		
+
+#edit #photoSelector{
+	display: block;
+	text-decoration: none;
+	background-image: url('skimages/cameraButtonUp.png');
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	background-position-x: center;
+	background-position-y: 0;
+	min-height: 160px;
+	max-width: 102px;
+	margin: 0 auto;
+}
+
+#edit #photoSelector:hover,#edit #photoSelector:active{
+	background-image: url('skimages/cameraButtonDown.png');
+}
+
+#edit #noteSelector{
+	display: block;
+	text-decoration: none;
+	background-image: url('skimages/writeButtonUp.png');
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	background-position-x: center;
+	background-position-y: 0;
+	min-height: 160px;
+	max-width: 102px;
+	margin: 0 auto;
+}
+
+#edit #noteSelector:hover,#edit #noteSelector:active{
+	background-image: url('skimages/writeButtonDown.png');
 }
 
 

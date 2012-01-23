@@ -31,18 +31,22 @@
 <body id="edit" onload="createAutoResizingTextArea('notes_content')"> 
 	
 	<form id="editForm" action="" method="get">
-		<label>What did you find?</label><br />
+		<label>What did you find?</label>
 		<input id="item" name="item" value="Cloves"/ ><br />
 		
-		<label>Where did you find it?</label><br />
+		<label>Where did you find it?</label>
 		<input id="place" name="place" value="Holts's Cigar Company"/ ><br />
 		
 		<a id="locationSelector" href="">1522 Walnut Street</a><br />
 		
-		<a id="photoSelector" href="">Add Photo</a>
-		
-		<a id="noteSelector" href="">Add Note</a>
-		
+		<div id="selectors">
+			<div>
+				<a id="photoSelector" href=""></a>
+			</div>
+			<div>
+				<a id="noteSelector" href=""></a>
+			</div>
+		</div>
 		<br />
 		<div id="notes">
 			<textarea id="notes_content" onkeyup="resizeTextArea()">
