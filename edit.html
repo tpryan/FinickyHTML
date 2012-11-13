@@ -4,9 +4,23 @@
 	<title>Edit - Finicky</title> 
 	<link rel="stylesheet" href="css/main.css" type="text/css" media="screen" />
 	<meta name="viewport"content="width=100%; initial-scale=1;  maximum-scale=1;  minimum-scale=1;   user-scalable=no;" />
-	
+	<script type="text/javascript" src="js/iscroll.js"></script>
+	<script type="text/javascript" src="js/zepto.min.js"></script>
+	<script type="text/javascript" src="js/finicky.js"></script>
 	
 	<script>
+
+		var myScroll;
+		function loaded() {
+			myScroll = new iScroll('wrapper', {fadeScrollbar:false});
+		}
+		
+		$(document).ready(function (){	
+			$('#locationSelector').bind('click', toggleLocationModal);
+		}
+		);
+		document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+		document.addEventListener('DOMContentLoaded', setTimeout(function () { loaded(); }, 200), false);
 		
 		function createAutoResizingTextArea(textAreaID){
 			var textArea = document.querySelector("#" + textAreaID);
@@ -24,6 +38,18 @@
 			content.style.height = container.offsetHeight + "px";
 			
 		}
+
+		function toggleLocationModal(e){
+			e.preventDefault(); 
+			$('#locationModal').show();
+			$('#locationModal').css('opacity', "1");
+			$('#locationModal').css('-moz-opacity', "1");
+
+
+
+		}
+
+
 	</script>	
 	 
     
@@ -38,6 +64,20 @@
 		<input id="place" name="place" value="Holts's Cigar Company"/ ><br />
 		
 		<a id="locationSelector" href="">1522 Walnut Street</a><br />
+
+		<div id="locationModal">
+			<div id="wrapper">
+				<ul id="placeList">
+					<li><a href="">1522 Walnut Street</a></li>
+					<li><a href="">1523 Walnut Street</a></li>
+					<li><a href="">1524 Walnut Street</a></li>
+					<li><a href="">1525 Walnut Street</a></li>
+					<li><a href="">1525 Walnut Street</a></li>
+					<li><a href="">Add Manually</a></li>
+				</ul>
+			</div>
+		</div>
+
 		
 		<div id="selectors">
 			<div>
