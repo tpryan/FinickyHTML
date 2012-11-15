@@ -1,0 +1,73 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<title>DB Development - Finicky</title>
+
+	<script type="text/javascript">
+
+		window.addEventListener("DOMContentLoaded", init, false);
+
+		window.indexedDB = window.indexedDB || window.webkitIndexedDB || window.mozIndexedDB;
+
+		function init() {
+			html5rocks.indexedDB.open();
+		}
+
+		var html5rocks = {};
+		html5rocks.indexedDB = {};
+		html5rocks.indexedDB.db = null;
+		html5rocks.items = {};
+		html5rocks.locations = {};
+
+		html5rocks.indexedDB.open = function() {
+			console.log("Opening Database");
+			var request = indexedDB.open("Finicky");
+
+			request.onsuccess = function(e) {
+				console.log("Opening Database: Success");
+				var v = "1.0";
+				html5rocks.indexedDB.db = e.target.result;
+				var db = html5rocks.indexedDB.db;
+				
+				// We can only create Object stores in a setVersion transaction;
+				if (v!= db.version) {
+					var setVrequest = db.setVersion(v);
+					setVrequest.onsuccess = function(e) {
+						console.log("Creating Item Store");
+						html5rocks.items = db.createObjectStore("item", {keyPath: "id"});
+						console.log("Creating Location Store");
+						html5rocks.locations = db.createObjectStore("location", {keyPath: "id"});
+					};
+					setVrequest.onfailure = html5rocks.indexedDB.onerror;
+				} 
+			};
+
+			request.onfailure = html5rocks.indexedDB.onerror;
+		};
+
+		html5rocks.indexedDB.onerror = function(error) {
+			console.log(error);
+		}
+
+		html5rocks.indexedDB.addItem = function(item) {
+
+			var trans = html5rocks.indexedDB.transaction(["Finicky"], "readwrite");
+			var store = trans.objectStore("item");
+			var request = store.put(item);
+			request.onsuccess = function(e) {
+				console.log("Item Added");
+			};
+
+			request.onerror = html5rocks.indexedDB.onerror;
+
+		}
+
+
+
+	</script> 
+	
+</head> 
+<body> 
+	
+</body>
+</html>
