@@ -10,56 +10,122 @@
 		window.indexedDB = window.indexedDB || window.webkitIndexedDB || window.mozIndexedDB;
 
 		function init() {
-			html5rocks.indexedDB.open();
+			finicky.indexedDB.open();
+
+			
+
 		}
 
-		var html5rocks = {};
-		html5rocks.indexedDB = {};
-		html5rocks.indexedDB.db = null;
-		html5rocks.items = {};
-		html5rocks.locations = {};
+		function addItem() {
+			var sampleItem = new Item("Cloves");
+			finicky.indexedDB.addItem(sampleItem);
 
-		html5rocks.indexedDB.open = function() {
+			var sampleLocation = new Location("Holt's", "1532 Walnut St", "Philadelphia", "PA", "19104", "USA");
+			finicky.indexedDB.addLocation(sampleLocation);
+
+			var samplePick = new Pick(sampleItem,sampleLocation);
+			finicky.indexedDB.addPick(samplePick);
+		}
+
+		var finicky = {};
+		finicky.indexedDB = {};
+		finicky.indexedDB.db = null;
+
+		finicky.indexedDB.open = function() {
 			console.log("Opening Database");
 			var request = indexedDB.open("Finicky");
 
 			request.onsuccess = function(e) {
 				console.log("Opening Database: Success");
 				var v = "1.0";
-				html5rocks.indexedDB.db = e.target.result;
-				var db = html5rocks.indexedDB.db;
+				finicky.indexedDB.db = e.target.result;
+				var db = finicky.indexedDB.db;
 				
 				// We can only create Object stores in a setVersion transaction;
 				if (v!= db.version) {
 					var setVrequest = db.setVersion(v);
 					setVrequest.onsuccess = function(e) {
 						console.log("Creating Item Store");
-						html5rocks.items = db.createObjectStore("item", {keyPath: "id"});
+						finicky.items = db.createObjectStore("item", {keyPath: "id"});
 						console.log("Creating Location Store");
-						html5rocks.locations = db.createObjectStore("location", {keyPath: "id"});
+						finicky.locations = db.createObjectStore("location", {keyPath: "id"});
+						console.log("Creating Pick Store");
+						finicky.locations = db.createObjectStore("pick", {keyPath: "id"});
 					};
-					setVrequest.onfailure = html5rocks.indexedDB.onerror;
+					setVrequest.onfailure = finicky.indexedDB.onerror;
 				} 
 			};
 
-			request.onfailure = html5rocks.indexedDB.onerror;
+			request.onfailure = finicky.indexedDB.onerror;
 		};
 
-		html5rocks.indexedDB.onerror = function(error) {
+		finicky.indexedDB.onerror = function(error) {
 			console.log(error);
 		}
 
-		html5rocks.indexedDB.addItem = function(item) {
-
-			var trans = html5rocks.indexedDB.transaction(["Finicky"], "readwrite");
+		finicky.indexedDB.addItem = function(item) {
+			console.log("Trying to Add Item");
+			var db = finicky.indexedDB.db;
+			var trans = db.transaction(["item"], "readwrite");
 			var store = trans.objectStore("item");
 			var request = store.put(item);
 			request.onsuccess = function(e) {
 				console.log("Item Added");
 			};
 
-			request.onerror = html5rocks.indexedDB.onerror;
+			request.onerror = finicky.indexedDB.onerror;
 
+		}
+
+		finicky.indexedDB.addLocation = function(location) {
+			console.log("Trying to Add Location");
+			var db = finicky.indexedDB.db;
+			var trans = db.transaction(["location"], "readwrite");
+			var store = trans.objectStore("location");
+			var request = store.put(location);
+			request.onsuccess = function(e) {
+				console.log("Location Added");
+			};
+
+			request.onerror = finicky.indexedDB.onerror;
+
+		}
+
+		finicky.indexedDB.addPick = function(pick) {
+			console.log("Trying to Add Item");
+			var db = finicky.indexedDB.db;
+			var trans = db.transaction(["pick"], "readwrite");
+			var store = trans.objectStore("pick");
+			var request = store.put({"item":pick.item.id,"location":pick.location.id});
+			request.onsuccess = function(e) {
+				console.log("Pick Added");
+			};
+
+			request.onerror = finicky.indexedDB.onerror;
+
+		}
+
+		function Item(name){
+			this.name= name;
+			this.id = new Date().getTime();
+		}
+
+		function Location(name,address,city,state,mailingCode,country,lat,lon) {
+			this.name= name;
+			this.address = address;
+			this.city = city;
+			this.state = state;
+			this.mailingCode = mailingCode;
+			this.country = country;
+			this.lat = lat;
+			this.lon = lon;
+			this.id = new Date().getTime();
+		}
+
+		function Pick(item,location){
+			this.item = item;
+			this.location = location;
+			this.id = new Date().getTime();
 		}
 
 
@@ -68,6 +134,6 @@
 	
 </head> 
 <body> 
-	
+	<button onclick="addItem()">Add Item</button>
 </body>
 </html>
